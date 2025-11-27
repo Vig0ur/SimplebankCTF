@@ -67,6 +67,9 @@ def read_root():
 
 @app.get("/flag/{user_id}/{password}/{team}")
 def submit_flag(user_id, password, team):
+    if user_pass[user_id] == password:
+        # append teampoints
+        pass
     return [user_id, password, team]
 
 if __name__ == "__main__":
